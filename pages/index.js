@@ -13,6 +13,7 @@ function Home() {
       <h1>HomePage</h1>
       <Link href="/blog">Blog</Link>
       <Link href="/product">Products</Link>
+      <Link href="/prerender">Pre Render</Link>
       <button onClick={handleClick}>Click me now!</button>
     </div>
   )
