@@ -14,7 +14,12 @@ function Home() {
       <Link href="/blog">Blog</Link>
       <Link href="/product">Products</Link>
       <Link href="/prerender">Pre Render</Link>
+      <br />
       <button onClick={handleClick}>Click me now!</button>
+      <br />
+      <Link href="/users">Users</Link>
+      <br />
+      <Link href="/posts">Posts</Link>
     </div>
   )
 }
