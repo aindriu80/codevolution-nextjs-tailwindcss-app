@@ -50,11 +50,9 @@ Some crawlers did not support JavaScript. The loading page would be rendered and
 
 <br/>
 
-### Incremental Static Regeneration
+## Incremental Static Regeneration
 
 There was a need to update only those pages which needed a change without having to rebuild the entire app
-
-<br/>
 
 ### Incremental Static Regeneration (ISR)
 
@@ -62,9 +60,22 @@ With ISR, Next.js allows you to update static pages after you've built your appl
 
 You can statically generate individual pages without needing to rebuild the entire stite, effectively solving the issue of dealing with stale data
 
-<br/>
-
 ### How?
 
 In the getStaticProps function, apart from the props key, we can specify a revalidate key
+
 The value for revalidate is the number of seconds after which a page re-generated can occur
+
+<br/>
+
+## Regeneration
+
+A re-generation is initiated only if a user makes a request after the revalidate time
+
+If a user visits our product details page but there is no other user hitting that page the entire day, the re-generation does not happen
+
+Revalidate does not mean the page automatically re-generats every 10 seconds
+
+It simply denotes the time after which, if a user makes a request, a re-generation has to be initiated
+
+The re-generation can also fail and the previously cached HTML could be served till the subsequent re-generations succeed
