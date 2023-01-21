@@ -1,10 +1,28 @@
-# codevolution-nextjs-tailwindcss-app-
+# codevolution-nextjs-tailwindcss-app
 
-#getStaticPaths fallback:true
+## What about getStaticPaths?
 
-#When?
+<br/>
+Pre-render only a few pages at build time and rest of the pages can be pre-rendered on request
 
-the true value is most suitable if your app has a very large number of static pages that depend on data
+Can we not use that to render say 1,000 most popular pages and res of the 99,000 pages can be pre-rendered on request
+
+If your application has 90% static pages and 10% dynamic pages, getStaticPaths will not help much
+
+An E-Commerce site typically will have 90% dynamic pages and 10% static pages. So we can reduce the total build time by using getSaticPaths
+
+It still does not fix the issue of stale data
+
+If you render 1,000 pages at build time, and then the rest are generated based on incoming requsest, using fallback true or fallback 'blocking', changes in data will not update the already pre-rendered pages.
+<br/>
+
+## getStaticPaths fallback:true
+
+### When?
+
+<br/>
+
+The true value is most suitable if your app has a very large number of static pages that depend on data
 
 A Large E-Commerce site.
 
@@ -18,11 +36,35 @@ Shortly after, getStaticProps finishes and the page will be rendered with the re
 
 This ensures that users always have a fast experience while preserving fast builds and the benefit of Static Generation.
 <br/>
+<br/>
 
-#getStaticPaths fallback: 'blocking'
+## getStaticPaths fallback: 'blocking'
 
-#When?
+### When?
+
+<br/>
 
 On a UX level, sometimes, people prefer the page to be loaded wihout a loading indicator if the wait time isa fe milli second. This helps avoid the layout shift.
 
 Some crawlers did not support JavaScript. The loading page would be rendered and then the fulll page would be loaded which was causing a problem.
+
+<br/>
+
+### Incremental Static Regeneration
+
+There was a need to update only those pages which needed a change without having to rebuild the entire app
+
+<br/>
+
+### Incremental Static Regeneration (ISR)
+
+With ISR, Next.js allows you to update static pages after you've built your application
+
+You can statically generate individual pages without needing to rebuild the entire stite, effectively solving the issue of dealing with stale data
+
+<br/>
+
+### How?
+
+In the getStaticProps function, apart from the props key, we can specify a revalidate key
+The value for revalidate is the number of seconds after which a page re-generated can occur
