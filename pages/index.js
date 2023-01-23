@@ -10,12 +10,12 @@ function Home() {
   }
   return (
     <div>
-      <header class="container">
+      <header className="container">
         <hgroup>
           <h1>Next.JS HomePage</h1>
-          <h2>
-            a Next.JS project using some of it's features, with Pico CSS styling
-          </h2>
+          <p>
+            a Next.JS project using some of its features, with Pico CSS styling
+          </p>
         </hgroup>
       </header>
 
@@ -30,7 +30,7 @@ function Home() {
       <br />
 
       <div className="container">
-        <button onClick={handleClick} class="secondary">
+        <button onClick={handleClick} className="secondary">
           Click me now!
         </button>
       </div>
@@ -38,7 +38,8 @@ function Home() {
 
       <div className="container">
         <section>
-          <Link href="/users">Users </Link> |<Link href="/posts"> Posts</Link>
+          <Link href="/users">Users </Link> |<Link href="/posts"> Posts</Link> |{' '}
+          <Link href="/news"> News</Link>
         </section>
       </div>
     </div>

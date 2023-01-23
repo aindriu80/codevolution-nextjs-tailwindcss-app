@@ -2,19 +2,28 @@ import Link from 'next/link'
 function PostList({ posts }) {
   return (
     <>
-      <h1>List of Posts</h1>
-      {posts.map((post) => {
-        return (
-          <div key={post.id}>
-            <Link href={`posts/${post.id}`} passHref>
-              <h2>
-                {post.id} {post.title}
-              </h2>
-            </Link>
-            <hr />
-          </div>
-        )
-      })}
+      <header className="container">
+        <hgroup>
+          <h1>List of Posts</h1>
+          <p>The individual products page</p>
+          <Link href="/">Home</Link>
+        </hgroup>
+      </header>
+
+      <div className="container">
+        {posts.map((post) => {
+          return (
+            <div key={post.id}>
+              <Link href={`posts/${post.id}`} passHref>
+                <h2>
+                  {post.id} {post.title}
+                </h2>
+              </Link>
+              <hr />
+            </div>
+          )
+        })}
+      </div>
     </>
   )
 }

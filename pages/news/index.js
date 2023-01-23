@@ -1,16 +1,26 @@
+import Link from 'next/link'
 function NewsArticleList({ articles }) {
   return (
     <>
-      <h1>List of News Articles</h1>
-      {articles.map((article) => {
-        return (
-          <div key={article.id}>
-            <h2>
-              {article.id} | {article.title} | {article.category}
-            </h2>
-          </div>
-        )
-      })}
+      <header className="container">
+        <hgroup>
+          <h1>List of News Articles</h1>
+          <p>various news articles</p>
+          <Link href="/">Home</Link>
+        </hgroup>
+      </header>
+
+      <div className="container">
+        {articles.map((article) => {
+          return (
+            <div key={article.id}>
+              <h2>
+                {article.id} | {article.title} | {article.category}
+              </h2>
+            </div>
+          )
+        })}
+      </div>
     </>
   )
 }
