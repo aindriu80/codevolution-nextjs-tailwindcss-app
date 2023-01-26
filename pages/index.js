@@ -39,7 +39,8 @@ function Home() {
       <div className="container">
         <section>
           <Link href="/users">Users </Link> |<Link href="/posts"> Posts</Link> |{' '}
-          <Link href="/news"> News</Link>
+          <Link href="/news"> News</Link> |
+          <Link href="/dashboard">Dashboard</Link>
         </section>
       </div>
     </div>
