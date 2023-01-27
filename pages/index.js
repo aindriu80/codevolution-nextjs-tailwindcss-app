@@ -40,7 +40,8 @@ function Home() {
         <section>
           <Link href="/users">Users </Link> |<Link href="/posts"> Posts</Link> |{' '}
           <Link href="/news"> News</Link> |
-          <Link href="/dashboard">Dashboard</Link>
+          <Link href="/dashboard">Dashboard</Link> |
+          <Link href="/events">Events</Link>
         </section>
       </div>
     </div>
