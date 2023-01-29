@@ -161,3 +161,17 @@ getServerSideProps function helps with SSR data fetching
 Combining pre-rendering with client-side data fetching
 
 Shallow routing - Routing without calling getStaticProps/getServerSideProps
+
+### API Routes Section
+
+Can write Front End code in React and also write APIs that can be called by the front end code
+
+API routes allow you to create RESTful endpoints as part of your Next.js application folder structure
+
+Within the pages folder, you need to create a folder called 'api'
+
+Within that 'api' folder, you can define all the APIs for your application
+
+You can add business logic without needing to write any additional custom server code and without having to configure any API routes
+
+Next.js gives you everything you need to write full-stack React + Node applications
