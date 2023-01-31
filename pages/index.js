@@ -42,7 +42,7 @@ function Home() {
           <Link href="/news"> News</Link> |
           <Link href="/dashboard"> Dashboard</Link> |
           <Link href="/events"> Events</Link> |
-          <Link href="/comments"> Comments</Link>
+          <Link href="/comments"> Comments</Link> |<Link href="/api"> API</Link>
         </section>
       </div>
     </div>
