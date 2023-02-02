@@ -176,7 +176,7 @@ You can add business logic without needing to write any additional custom server
 
 Next.js gives you everything you need to write full-stack React + Node applications
 
-## Summary
+## API Summary
 
 API routing mechanism is similar to page based routing mechanism
 
@@ -195,3 +195,13 @@ Catch all API routes
 How to handle a DELETE request
 
 We should not call our own API routes for pre-rendering content
+
+### Styling
+
+Global - In our application, we need to import the CSS file within pages/\_app.js
+
+Component level - Next.js supports CSS Modules using a [name].module.css naming convention
+
+SASS Support - Install the SASS package
+
+CSS-IN-JS Solutions - Inline styles and Styled Components
