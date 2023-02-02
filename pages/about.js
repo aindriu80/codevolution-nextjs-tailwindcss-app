@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import styles from '../styles/About.module.css'
+// import styles from '../styles/About.module.css'
+import styles from '../styles/About.module.scss'
 function About() {
   return (
     <>
@@ -13,7 +14,8 @@ function About() {
       </header>
 
       <container>
-        <div className={styles.hightlight}>About</div>
+        {/* <div className={styles.highlight}>About</div> */}
+        <div className={styles.highlightscss}>About</div>
       </container>
     </>
   )

@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import styles from '../styles/Contact.module.css'
+// import styles from '../styles/Contact.module.css'
+import styles from '../styles/Contact.module.scss'
 function contact() {
   return (
     <>
@@ -13,7 +14,8 @@ function contact() {
       </header>
 
       <container>
-        <div className={styles.hightlight}>Contact</div>
+        {/* <div className={styles.highlight}>Contact</div> */}
+        <div className={styles.highlightscss}>Contact</div>
       </container>
     </>
   )
