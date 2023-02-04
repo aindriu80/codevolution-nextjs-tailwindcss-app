@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
@@ -10,6 +11,9 @@ function Home() {
   }
   return (
     <div>
+      <Head>
+        <title>Codevolution Next.js Tailwindcss App</title>
+      </Head>
       <header className="container">
         <hgroup>
           <h1>Next.JS HomePage</h1>

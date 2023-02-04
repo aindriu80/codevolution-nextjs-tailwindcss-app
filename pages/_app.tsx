@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import '../styles/globals.css'
 import '@picocss/pico'
 import { ThemeProvider } from 'styled-components'
@@ -21,11 +22,15 @@ function App({ Component, pageProps }) {
   // )} {
   return (
     <>
-      <Header />
+      <Head>
+        <title>Codevolution Next.js Tailwindcss App</title>
+        <meta name="description" content="Free tutorial on web development" />
+      </Head>
+      {/* <Header /> */}
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />
       </ThemeProvider>
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }
