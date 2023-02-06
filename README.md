@@ -221,3 +221,13 @@ Cannot use ISR or SSR
 Client side data fetching for dynamic content
 
 Landing pages, blogs and any app where the content is generated at build time
+
+### Preview Mode
+
+In pre-rendering pages are pre-rendered ay build time - useful feature when your pages fetch data from a CMS, however it's not suitable when
+your creating a draft in your CMS and you want to preview the draft changes immediately on your page.
+
+Next.js can bypass the static generation option - you deploy your app when you make changes in the CMS, however they won't be reflected as pages
+as they are only generated when you build the application.
+
+There was need to handle this scenario of 'Preview of Publish'
