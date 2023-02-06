@@ -4,9 +4,9 @@ import '@picocss/pico'
 import { ThemeProvider } from 'styled-components'
 import type { AppProps } from 'next/app'
 
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import '../styles/layout.css'
+import Header from '@/layout/Header'
+import Footer from '@/layout/Footer'
+import 'styles/layout.css'
 
 const theme = {
   colors: {
@@ -26,11 +26,11 @@ function App({ Component, pageProps }) {
         <title>Codevolution Next.js Tailwindcss App</title>
         <meta name="description" content="Free tutorial on web development" />
       </Head>
-      {/* <Header /> */}
+      <Header />
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />
       </ThemeProvider>
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 }

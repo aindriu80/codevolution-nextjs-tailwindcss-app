@@ -3,7 +3,8 @@ import Link from 'next/link'
 
 // import styles from '../styles/About.module.css'
 import styles from '../styles/About.module.scss'
-import Footer from '../components/Footer'
+// import Footer from '../components/Footer'
+import Footer from '@/layout/Footer'
 function About() {
   return (
     <>
