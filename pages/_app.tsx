@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import '../styles/globals.css'
 import '@picocss/pico'
-import { ThemeProvider } from 'styled-components'
+// import { ThemeProvider } from 'styled-components'
 import type { AppProps } from 'next/app'
 
 import Header from '@/layout/Header'
@@ -14,11 +14,11 @@ const theme = {
   },
 }
 
-// export default function App({ Component, pageProps }: AppProps) {
-function App({ Component, pageProps }) {
-  if (Component.getLayout) {
-    return Component.getLayout(<Component {...pageProps} />)
-  }
+export default function App({ Component, pageProps }: AppProps) {
+  // function App({ Component, pageProps }) {
+  // if (Component.getLayout) {
+  //   return Component.getLayout(<Component {...pageProps} />)
+  // }
   // )} {
   return (
     <>
@@ -27,12 +27,12 @@ function App({ Component, pageProps }) {
         <meta name="description" content="Free tutorial on web development" />
       </Head>
       <Header />
-      <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
-      </ThemeProvider>
+      {/* <ThemeProvider theme={theme}> */}
+      <Component {...pageProps} />
+      {/* </ThemeProvider> */}
       <Footer />
     </>
   )
 }
 
-export default App
+// export default App

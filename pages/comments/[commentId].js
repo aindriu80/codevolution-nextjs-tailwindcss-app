@@ -21,7 +21,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   const { params } = context
-  const { commendId } = params
+  const { commentId } = params
 
   const comment = comments.find((comment) => comment.id === parseInt(commentId))
   console.log(comment)
