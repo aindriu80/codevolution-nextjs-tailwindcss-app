@@ -231,3 +231,23 @@ Next.js can bypass the static generation option - you deploy your app when you m
 as they are only generated when you build the application.
 
 There was need to handle this scenario of 'Preview of Publish'
+
+## Misc Section Summary
+
+App layout in \_app.js file
+
+Head component helps you dynamically manage a document's head section
+
+Image component optimization in Next.js is very useful
+
+Configure absolute imports and configure path aliases with the jsconfig.json
+
+next imports command exports your app into static HTML
+
+There is setup support for Typescript
+
+Preview mode feature is very helpful when working with CMS
+
+Next configuration file & configuring redirects
+
+Environment variables in .env.local
