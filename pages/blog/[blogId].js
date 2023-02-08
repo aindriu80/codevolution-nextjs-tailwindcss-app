@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { createGlobalStyle } from 'styled-components'
 
 function Blog({ title, description }) {
   return (
@@ -8,6 +9,7 @@ function Blog({ title, description }) {
         <meta name="description" context={description} />
       </Head>
       <h1 className="context">Article</h1>
+      Env Analytics {process.env.NEXT_PUBLIC_ANALYTICS_ID}
     </>
   )
 }
@@ -22,6 +24,12 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps() {
+  const user = process.env.DB_USER
+  const password = process.env.DB_PASSWORD
+
+  console.log(
+    `Connecting to example database with username ${user} and password ${password}`
+  )
   return {
     props: {
       title: 'Article Title',
