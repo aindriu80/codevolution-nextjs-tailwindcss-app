@@ -251,3 +251,13 @@ Preview mode feature is very helpful when working with CMS
 Next configuration file & configuring redirects
 
 Environment variables in .env.local
+
+### Authentication
+
+User -> Identity(who) & Access(verifying what permissions user has)
+
+Identity -> Authentication, Access -> Authorization
+
+Consider Client-side, Server-side, API routes authentication
+
+User data - need to persist? Can use Github, Facebook etc, use a database for persistance

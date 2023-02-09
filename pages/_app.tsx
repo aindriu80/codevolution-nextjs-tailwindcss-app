@@ -6,6 +6,7 @@ import type { AppProps } from 'next/app'
 
 import Header from '@/layout/Header'
 import Footer from '@/layout/Footer'
+import 'styles/Navbarcss.css'
 import 'styles/layout.css'
 
 const theme = {
