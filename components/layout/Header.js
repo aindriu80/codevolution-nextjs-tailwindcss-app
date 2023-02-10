@@ -6,7 +6,7 @@ function Header() {
   return (
     <nav className="header">
       <h1 className="logo">
-        <a href="#">NextAuth</a>
+        <Link href="#">NextAuth</Link>
       </h1>
       <ul className={`main-nav ${!session && loading ? 'loading' : 'loaded'}`}>
         <li>
@@ -22,13 +22,14 @@ function Header() {
         {!loading && !session && (
           <li>
             <Link href="/api/auth/signin">
-              <a
+              {/* <a
                 onClick={(e) => {
                   e.preventDefault()
                   signIn('github')
                 }}>
                 Sign In
-              </a>
+              </a> */}
+              Sign In
             </Link>
           </li>
         )}
