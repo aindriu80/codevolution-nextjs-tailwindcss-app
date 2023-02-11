@@ -1,8 +1,8 @@
 import Link from 'next/link'
-
 import { signIn, signOut, useSession } from 'next-auth/client'
 function Header() {
   const [session, loading] = useSession()
+  console.log(session, loading)
   return (
     <nav className="header">
       <h1 className="logo">
@@ -22,20 +22,27 @@ function Header() {
         {!loading && !session && (
           <li>
             <Link href="/api/auth/signin">
-              {/* <a
+              <button
                 onClick={(e) => {
                   e.preventDefault()
                   signIn('github')
                 }}>
                 Sign In
-              </a> */}
-              Sign In
+              </button>
             </Link>
           </li>
         )}
         {session && (
           <li>
-            <Link href="/api/auth/signout">Signout</Link>
+            <Link href="/api/auth/signout">
+              <button
+                onClick={(e) => {
+                  e.preventDefault()
+                  signOut()
+                }}>
+                Signout
+              </button>
+            </Link>
           </li>
         )}
       </ul>
