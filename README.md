@@ -261,3 +261,19 @@ Identity -> Authentication, Access -> Authorization
 Consider Client-side, Server-side, API routes authentication
 
 User data - need to persist? Can use Github, Facebook etc, use a database for persistance
+
+Use next-auth package - can use GitHub etc to signin/out, client-side authentication with useSession hook, securing
+
+page client side with the getSession function. next-auth Provider much improves performance, reduces network calls &
+
+avoids page flicker when rendering.
+
+Server-side authentication with the getSession function in getServerSideProps
+
+Secure pages server side by redirecting from getServerSideProps
+
+getSession function can be used for authenticating API routes
+
+Possible to connect to MongoDB, Firebase to persist user data
+
+Callbacks let you customize the session object
