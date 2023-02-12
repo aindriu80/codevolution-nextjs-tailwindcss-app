@@ -24,7 +24,7 @@ export default function App({ Component, pageProps }: AppProps) {
   // )} {
   return (
     <>
-      <Provider>
+      <Provider session={pageProps.session}>
         <Head>
           <title>Codevolution Next.js Tailwindcss App</title>
           <meta name="description" content="Free tutorial on web development" />
