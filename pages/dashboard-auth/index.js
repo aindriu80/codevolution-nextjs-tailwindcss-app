@@ -3,7 +3,9 @@ import { useState, useEffect } from 'react'
 import { useSession } from 'next-auth/client'
 
 export default function Dashboard() {
-  const { data: session } = useSession()
+  // const { data: session } = useSession()
+  const [session, loading] = useSession()
+  // console.log('session: ', session, 'loading', loading)
   const [content, setContent] = useState()
 
   // Fetch content from protected route
@@ -30,6 +32,8 @@ export default function Dashboard() {
           <h2>Dashboard</h2>
           <p>The Auth Dashboard.....</p>
           <Link href="/">Home</Link>
+          <br />
+          {session ? `Welcome ${session.user.name}, ` : ''}
         </hgroup>
       </header>
 

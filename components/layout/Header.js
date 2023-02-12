@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { signIn, signOut, useSession } from 'next-auth/client'
 function Header() {
   const [session, loading] = useSession()
-  console.log(session, loading)
+  // console.log(session, loading)
   return (
     <nav className="header">
       <h1 className="logo">
